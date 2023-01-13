@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quebrada HUD</title>
+   <script src="gauge.min.js"></script>
+   <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+   <script src="https://kit.fontawesome.com/22b640f708.js" crossorigin="anonymous"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container-header">
+      <div class="header">
+         <div class="coupons">
+            <span class="title">CUPOM 40%: <b class="coupons-name"></b></span>
+            <span>RESTAM APENAS <b class="coupons-time"></b> PARA O FINAL DA PROMOÇÃO DO DIA DOS NAMORADOS</span>
+         </div>
+         <img src="./images/logo.png" class="logo">
+         <div class="info-container">
+            <div class="info">
+               <i class="fa-solid fa-location-arrow rotate-arrow"></i>
+               <span class="info-title compass">N</span>
+            </div>
+            <div class="info2">
+               <i class="fa-solid fa-microphone mic"></i>
+               <span class="info-description microphone-status">Alto</span>
+            </div>
+            <div class="info2 radio-container">
+               <i class="fa-solid fa-walkie-talkie"></i>
+               <span class="info-description radio-status">OFF</span><span class="info-label">Mhz</span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="container-bottom">
+         <div class="container-speedmeter">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"   class="level-left"
+               viewBox="0 35 110 70">
+               <g>
+                  <path d="M10 90A40 40 0 0 1 90 90" class="mainline" clip-path="" fill="none" stroke-width="10" stroke="#e89f2971" stroke-dasharray="130 120"></path>
+               </g>
+               <g>
+                  <path d="M10 90A40 40 0 0 1 90 90" clip-path="" fill="none" stroke-width="10" class="level-left-fill"
+                     stroke="orange" stroke-dasharray="85 120"></path>
+               </g>
+            </svg>
+
+            <div class="speedmeter-center">
+
+               <div class="fuel">
+                  <i class="fa-solid fa-caret-left"></i>
+                  <i class="fa-solid fa-gas-pump"></i>
+               </div>
+
+               <div class="motor-container">
+                  <div class="motor-bar">
+                     <div class="motor-progress">
+                        <div class="motor-progressbar">
+   
+                        </div>
+                     </div>
+                  </div>
+                  <div class="plate">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1831 2130.529" class="belt-icon">
+                        
+                        <path  data-name="Elipse 1"  d="M1309.5,185.54c121.48,0,219.96,98.479,219.96,219.96s-98.48,219.96-219.96,219.96-219.96-98.479-219.96-219.96S1188.02,185.54,1309.5,185.54ZM1887,441l115,140L1682,854s-63.62-56.64-164-98C1520.06,755.617,1887,441,1887,441ZM1498,765L812,1350s-7.451-410.991,151-512S1319.18,681.184,1498,765Zm182,104s146.06,102.37,116,706c1.6,3.88-437.46-79.22-963,21C830.874,1601.23,1680,869,1680,869ZM818,1776s-6.659-179.31-9-408c-6.066,5.99-418,351-418,351l99,150S635.458,1828.15,818,1776Zm11,21s421.58-113.27,954-26c-2.16,3.45,2.49,255.7-79,544,2.33,1.46-212,1-212,1s58.68-246.22,62-311c1.45,0.41-177.6-70.01-496-5,0.12,3.55,12.81,154.94,67,313,3.9,1.6-216,2-216,2S842.039,2098.74,829,1797Zm974-214s176.56,14.29,419,74c0.29,3.83-52,181-52,181l-371-77Z" transform="translate(-391 -185.531)"/>
+                      </svg>
+                     <!-- <i class="fa-brands fa-accessible-icon belt-icon"></i> -->
+                     <div class="motors">
+                        <i class="fa-solid fa-caret-left"></i>
+                        <i class="fa-solid fa-car"></i>
+                     </div>
+                     <i class="fa-solid fa-key key-icon"></i>
+                  </div>
+               </div>
+
+               <div class="speed">
+                  <span class="title-speed">KMH</span>
+                  <span class="current-speed"><span class="speedHight"></span></span>
+               </div>
+
+            </div>
+
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="100%" height="100%"  class="level-right"
+               viewBox="0 35 110 70">
+               <g>
+                  <path d="M90,90A40,40 0 0 010,90" class="mainline" clip-path="" fill="none" stroke-width="10"
+                     stroke="#e89f2971" stroke-dasharray="130 120"></path>
+               </g>
+               <g>
+                  <path d="M90,90A40,40 0 0 010,90" clip-path="" fill="none" stroke-width="10" class="level-right-fill"
+                     stroke="orange" stroke-dasharray="26 120"></path>
+               </g>
+            </svg>
+         </div>
+         <div class="bars">
+            <div class="bar health">
+               <div class="bar-align">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2244 949">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #e62625;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M2428,1323l-382,7s-69.94-6.31-119,50-79,92-79,92-12.68,7.77-20-1-159-221-159-221-30.21-38-80-38-78,41-78,41l-77,110s-14.52,16.45-23,0-194-510-194-510-8.15-34-72-34-83,48-83,48l-99,580s-13.786,22.13-23,1-125-301-125-301-4.927-45-78-45-86,37-86,37L486,1341H190l8,76,372-1s18.681,4.11,52-35,89-103,89-103l197,453s14.1,37,81,37,75-57,75-57l95-559s9.28-27.65,24-3c0.49,0.93,135,369,135,369s16.38,45,75,45,90-40,90-40l101-143s3.77-7,9-7,9,5,9,5l145,210s34.03,44,81,44,79-42,79-42l157-173,370-4Z" transform="translate(-190 -819)"/>
+                   </svg>
+                  <!-- <i class="fa-solid fa-heart-pulse"></i> -->
+                  <div class="bar-progress">
+                     <div class="bar-progressbar">
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bar armour">
+               <div class="bar-align">
+                  <i class="fa-solid fa-vest"></i>
+                  <div class="progressbar-container">
+                     <div class="bar-progress">
+                        <div class="bar-progressbar">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bar thirst">
+               <div class="bar-align">
+                  <i class="fa-solid fa-bottle-water"></i>
+                  <div class="progressbar-container">
+                     <div class="bar-progress">
+                        <div class="bar-progressbar">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bar hunger">
+               <div class="bar-align">
+                  <i class="fa-solid fa-bell-concierge"></i>
+                  <div class="progressbar-container">
+                     <div class="bar-progress">
+                        <div class="bar-progressbar">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="street-container">
+      <span class="street-title"> SAN JACINTO AVENUE </span><span class="data-title"> 23:00 </span>
+   </div>
+
+   <div id="displayNui">
+      <img src="https://media.discordapp.net/attachments/921563084328427570/921593564566290502/Sem_Titulo-2.png?width=671&height=671" alt="">
+      <h1>SUA CONEXÃO COM O SERVIDOR <br> FOI PERDIDA</h1>
+      <p> <br><br><br>Verifique sua conexão com <br> a internet.</p>
+      <p> <br><br><br>Obs: Por precaução, limitamos <br> você de realizar algumas ações.</p>
+      <p class="last-text">CASO SUA INTERNET TENHA CAÍDO, APENAS AGUARDE OU RELOGUE NA CIDADE</p>
+  </div>
+   <script src="script.js"></script>
+</body>
+
+</html>
